@@ -10,14 +10,23 @@ const Search = () => {
   const gc = useContext(githubContext);
   const ac = useContext(alertContext);
 
+  let timeoutId = 0;
+
   const onChange = (e) => {
-    const query = e.target.value;
     setText(e.target.value);
-    //if (query === "") {
-    //  ac.setAlert("Please Enter Something", "info");
-    //  return;
-    //}
-    gc.searchUsers(query);
+    if (e.target.value === "") {
+      ac.setAlert("Please Enter Something", "info");
+      return;
+    }
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => {
+      const query = e.target.value;
+      //if (query === "") {
+      //  ac.setAlert("Please Enter Something", "info");
+      //  return;
+      //}
+      gc.searchUsers(query);
+    }, 1500);
   };
 
   const onSubmit = (e) => {
@@ -39,7 +48,7 @@ const Search = () => {
             name="text"
             placeholder="Search Users..."
             value={text}
-            onChange={onChange}
+            onKeyUp={onChange}
           />
         </div>
       </form>
