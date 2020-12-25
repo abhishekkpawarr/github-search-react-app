@@ -14,17 +14,17 @@ const Search = () => {
 
   const onChange = (e) => {
     setText(e.target.value);
-    if (e.target.value === "") {
-      ac.setAlert("Please Enter Something", "info");
-      return;
-    }
+    //if (e.target.value === "") {
+    //  ac.setAlert("Please Enter Something", "info");
+    //  return;
+    //}
     clearTimeout(timeoutId);
     timeoutId = setTimeout(() => {
       const query = e.target.value;
-      //if (query === "") {
-      //  ac.setAlert("Please Enter Something", "info");
-      //  return;
-      //}
+      if (query === "") {
+        ac.setAlert("Please Enter Something", "info");
+        return;
+      }
       gc.searchUsers(query);
     }, 1500);
   };
