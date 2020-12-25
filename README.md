@@ -1,6 +1,6 @@
-##React App to directly search Githun
+## React App to directly search Github
 
-##Used axios methods to make calls to Github API, gets user profile image, username, bio, repos, etc
+## Used axios methods to make calls to Github API, gets user profile image, username, bio, repos, etc
 
-##Live Search Implemented
+## Live Search Implemented
 No need for search button. Shows result after each change in search box automatically. However if the query is typed too fast, then it shows error as too many requests are asked to the github server in short time.
