@@ -32,10 +32,10 @@ const User = ({ match }) => {
 
   return (
     <Fragment>
-      <Link to="/" className="btn btn-light">
+      <Link to="/" className="btn btn-info">
         Back To Search
       </Link>
-      <div className="card grid-2">
+      <div className="card grid-2 bg-dark">
         <div className="all-center">
           <img
             src={avatar_url}
@@ -53,7 +53,7 @@ const User = ({ match }) => {
               <p>{bio}</p>
             </Fragment>
           )}
-          <a href={html_url} className="btn btn-dark my-1">
+          <a href={html_url} className="btn btn-primary my-1">
             Visit Github Profile
           </a>
           <ul>

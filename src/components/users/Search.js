@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import githubContext from "../../context/github/githubContext";
 import alertContext from "../../context/alert/alertContext";
+// eslint-disable-next-line no-unused-vars
 import axios from "axios";
 
 const Search = () => {
@@ -43,7 +44,11 @@ const Search = () => {
         </div>
       </form>
       {gc.users.length > 0 && (
-        <button className="btn btn-warnning btn-block" onClick={gc.userClear}>
+        <button
+          type="button"
+          className="btn btn-warning btn-block"
+          onClick={gc.userClear}
+        >
           Clear
         </button>
       )}
