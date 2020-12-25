@@ -23,8 +23,9 @@ const Users = () => {
 const userStyle = {
   display: "grid",
   gridAutoColumns: "auto",
-  gridTemplateColumns: "auto auto auto",
-  gridGap: "1rem",
+  gridTemplateColumns: "auto auto auto auto",
+  //gridTemplateColumns: "repeat(4,100px)"
+  gridGap: "2rem",
 };
 
 export default Users;
